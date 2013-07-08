@@ -29,48 +29,13 @@ En d'autres termes en acceptant de lire se code tu me décharge de toute respons
 Une fois le dossier télécharger il y a quelques petites choses à faire afin que **HYAM** fonctionne :
 * L'arboresence DOIT être la suivante (Je sais c'est idiot, mais si ce n'est pas le cas certain script ne tourneront pas...): 
     
-    /www/HaveYouAMovie
-    |______/includes
-    |______.htaccess
-    |______index.php
+        /www/HaveYouAMovie  
+        |______/includes  
+        |______.htaccess  
+        |______index.php  
 
 * Les accès à la base de donnée peuvent être modifié dans le fichier /HaveYouAMovie/includes/core/config.php
-* Voici la base de donnée nécessaire au bon fonctionnement de **HYAM** :
-
-    CREATE DATABASE `hyam` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;
-    USE `hyam`;
-
-    CREATE TABLE IF NOT EXISTS `film` (
-      `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-      `title` varchar(128) NOT NULL,
-      `genre` varchar(128) NOT NULL,
-      `actors` varchar(128) NOT NULL,
-      `synopsis` text NOT NULL,
-      `qualite` varchar(16) NOT NULL,
-      `support` varchar(16) NOT NULL,
-      `poster` varchar(128) NOT NULL,
-      `trailer` varchar(64) NOT NULL,
-      `code` int(10) NOT NULL,
-      `productionYear` int(4) NOT NULL,
-      `originalTitle` varchar(128) NOT NULL,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=179 ;
-
-    CREATE TABLE IF NOT EXISTS `serie` (
-      `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
-      `title` varchar(128) NOT NULL,
-      `genre` varchar(128) NOT NULL,
-      `actors` varchar(128) NOT NULL,
-      `synopsis` text NOT NULL,
-      `qualite` varchar(16) NOT NULL,
-      `support` varchar(16) NOT NULL,
-      `poster` varchar(128) NOT NULL,
-      `trailer` varchar(64) NOT NULL,
-      `code` int(10) NOT NULL,
-      `saison` int(4) NOT NULL,
-      `originalTitle` varchar(128) NOT NULL,
-      PRIMARY KEY (`id`)
-    ) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+* La configuration de la bse de donnée se trouve dans le fichier /HaveYouAMovie/includes/core/db.sql
 
 * Activer le mod **rewrite_module** et faire en sorte que votre *http.conf* accepte les **.htaccess**
 
