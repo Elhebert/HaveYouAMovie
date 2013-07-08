@@ -1,0 +1,90 @@
+<?php
+
+    // Vérification si la page existe et création de l'entête associé à la page
+    if(isset($r['page']))
+    {
+        $request_page = basename($r['page']);
+        switch(ucfirst($request_page))
+        {
+            case 'Accueil' :    break;
+            case 'Films' :      break;
+            case 'Series' :     break;
+            case 'Login' :      break;
+            case 'Logout' :     break;
+            default :   $request_page = 'Accueil';
+                        redirection(BASE_URL);
+                        break;
+        }
+    }
+    else{
+        $r['page'] = $request_page = 'Accueil';
+    }
+?>
+
+<!DOCTYPE>
+<html>
+   <head>
+        <title><?= $config['name'] . ' (v' . $config['version'] . ') - ' . $request_page; ?></title>
+        
+        <meta name="keywords" lang="fr-be" content="haveyouamovie, HaveYouAMovies, Have You, have you, movie, Elhebert, elhebert" /><!--les mots clef-->
+        <meta name="title" content="<?= $config['name'] ?>" /><!--titre-->
+
+        <meta name="viewport" content="width=device-width" />
+
+        <meta name="email" content="elhebert@hotmail.be" /><!--mail du createur-->
+        <meta name="Author" content="Dieter Stinglhamber" /><!--nom du createur-->
+
+        <link rel="stylesheet" href="<?= BASE_URL . '/' . PATH_CSS ?>/app.css" />
+
+        <script src="<?= BASE_URL . '/' . PATH_JS ?>/vendor/custom.modernizr.js"></script>
+
+        <script src="<?= BASE_URL . '/' . PATH_JS ?>/vendor/jquery.js"></script>
+    </head>
+<body>
+    <nav class="top-bar">
+        <ul class="title-area">
+            <li class="name">
+                <h1><a href="<?= BASE_URL ?>">HYAM</a></h1>
+            </li>
+            <li class="toggle-topbar menu-icon">
+                <a href="#"><span>Menu</span></a>
+            </li>
+        </ul>
+        <section class="top-bar-section">
+            <ul class="left">
+                <li <?php echo ($request_page == 'Accueil') ? 'class="active"' : ''; ?>><a href="<?= BASE_URL ?>/Accueil">Accueil</a></li>
+                <li class="divider"></li>
+                <li class="has-dropdown<?php echo ($request_page == 'Films') ? ' active' : ''; ?>"><a href="#">Films</a>
+                    <ul class="dropdown">
+                        <li><a href="<?= BASE_URL ?>/Films/">Liste</a></li>
+                        <li><a href="<?= BASE_URL ?>/Films/Ajout">Ajout</a></li>
+                        <li><a href="<?= BASE_URL ?>/Films/Recherche">Recherche</a></li>
+                    </ul>
+                </li>
+                <li class="divider"></li>
+                <li class="has-dropdown <?php echo ($request_page == 'Series') ? 'active' : ''; ?>"><a href="<?= BASE_URL ?>/Series">Séries</a>
+                    <ul class="dropdown">
+                        <li><a href="<?= BASE_URL ?>/Series/">Liste</a></li>
+                        <li><a href="<?= BASE_URL ?>/Series/Ajout">Ajout</a></li>
+                        <li><a href="<?= BASE_URL ?>/Series/Recherche">Recherche</a></li>
+                    </ul>
+                </li>
+            </ul>
+            
+            <ul class="right">
+                <li class="has-form">
+                    <form method="POST" action="<?= BASE_URL ?>/Films/Recherche/">
+                        <div class="row collapse">
+                            <div class="small-8 columns">
+                                <input type="text" id="film" name="film" placeholder="Nom du film..." >
+                            </div>
+                            <div class="small-4 columns">
+                                <input type="submit" id="submit" name="submit" class="alert button" value="Rechercher">
+                            </div>
+                        </div>
+                    </form>
+                    </li>
+                </li>
+            </ul>
+        </section>
+    </nav>
