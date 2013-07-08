@@ -29,7 +29,7 @@ En d'autres termes en acceptant de lire se code tu me décharge de toute respons
 Une fois le dossier télécharger il y a quelques petites choses à faire afin que **HYAM** fonctionne :
 * L'arboresence DOIT être la suivante (Je sais c'est idiot, mais si ce n'est pas le cas certain script ne tourneront pas...): 
     
-        /www/HaveYouAMovie  
+        /HaveYouAMovie  
         |______/includes  
         |______.htaccess  
         |______index.php  
