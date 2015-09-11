@@ -1,49 +1,27 @@
-#HaveYouAMovie 0.1 (alpha)
-##Créer votre liste de films et de séries très facilement
+#HaveYouAMovie 2.0.0
 
-##HYAM c'est quoi ?
-Cette version de HYAM à été codé pour aider mon père à tenir une liste de films et de série à jour sans devoir imprimer 300 pages excell.
-De plus l'interface du site rend plus facile la recherche d'un film et des ses infos.
+Big badass rework in progress.
 
-J'utilise une API Allocine homemade, on en trouve plusieurs sur le net, perso j'utilise [celle ci](http://wiki.gromez.fr/dev/api/allocine_v3).
+Switching from :
+- procédural php
+- jQuery + ajax
 
-Mon père cherchant juste à avoir une version qui puisse tourné sans devoir chippoté, je n'ai pas vraiment chercher à coder proprement, mais promis, je vais améliorer tout ça !
+to :
+- Angular.js
+- slim
 
-* *@author*     Elhebert
-* *@name*       HYAM (HaveYouAMovie)
-* *@version*    0.1 (aplha)
+## Installation
 
-##Disclaimer
+After cloning this repo, don't forget to run:
 
-Je tiens à vous mettre en garde ami codeur ! Ce code à été réaliser dans des conditions de codage foireux *optimale* !
-En lisant mon code tu risque :
-* D'avoir de saigner des yeux
-* De faire un crise cardiaque
-* De faire un malaise
-* Et bien d'autres choses pas cool à avoir (Morpions, ...) !
+```
+composer install
+bower install
+```
 
-En d'autres termes en acceptant de lire se code tu me décharge de toute responsabilité de ce qui pourrait t'arriver ensuite :)
 
-##Installation
+## Contributing
 
-Une fois le dossier télécharger il y a quelques petites choses à faire afin que **HYAM** fonctionne :
-* L'arboresence DOIT être la suivante (Je sais c'est idiot, mais si ce n'est pas le cas certain script ne tourneront pas...): 
-    
-        /HaveYouAMovie  
-        |______/includes  
-        |______.htaccess  
-        |______index.php  
+If you wish to help me and contribute, feel free to clone, just be kiond enough to respect some guidelines :
 
-* Les accès à la base de donnée peuvent être modifié dans le fichier /HaveYouAMovie/includes/core/config.php
-* La configuration de la bse de donnée se trouve dans le fichier /HaveYouAMovie/includes/core/db.sql
-
-* Activer le mod **rewrite_module** et faire en sorte que votre *http.conf* accepte les **.htaccess**
-
-##Amélioration à venir
-Oui je sais il y en as beaucoup, car pour le moment, mon code ne ressemble à rien :
-
-* Utilisation d'un système de template (ex : RainTPL)
-* Optimisation des script ajax afin qu'ils soient indépendant du nom du dossier source
-* Création d'un script d'installation afin de simplifié cette dernière
-* Amélioration de la clarté du code, car pour le moment il ressemble à rien !
-* Et plein d'autre chose que j'ai sans nul doute oublier !
+- AngularJS : John Papa's angular styleguide (see [here](https://github.com/johnpapa/angular-styleguide))
