@@ -1,0 +1,16 @@
+{
+  "name": "haveyou-a-movie",
+  "version": "1.0.0",
+  "authors": [
+    "Elhebert <elhebert@hotmail.be>"
+  ],
+  "main": "app.js",
+  "license": "ISC",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

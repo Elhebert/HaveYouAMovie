@@ -1,0 +1,13 @@
+{
+    "name": "elhebert/haveyou-a-movie",
+    "license": "ISC",
+    "authors": [
+        {
+            "name": "Elhebert",
+            "email": "elhebert@hotmail.be"
+        }
+    ],
+    "require": {
+        "slim/slim": "^2.6"
+    }
+}
