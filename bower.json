@@ -4,7 +4,7 @@
   "authors": [
     "Elhebert <elhebert@hotmail.be>"
   ],
-  "main": "app.js",
+  "main": "public/app.js",
   "license": "ISC",
   "ignore": [
     "**/.*",
@@ -12,5 +12,15 @@
     "bower_components",
     "test",
     "tests"
-  ]
+  ],
+  "homepage": "https://github.com/Elhebert/HaveYouAMovie",
+  "moduleType": [
+    "globals"
+  ],
+  "dependencies": {
+    "angular-material": "~0.11.0",
+    "angular-ui-router": "~0.2.15",
+    "angular-ui": "~0.4.0",
+    "angular": "angularjs#~1.4.5"
+  }
 }
