@@ -4,11 +4,11 @@
 
     angular
         .module('hyam.serie')
-        .factory('serieService', serieService);
+        .factory('SerieService', SerieService);
 
-    serieService.$inject = ['$http', 'logger'];
+    SerieService.$inject = ['$http', 'logger'];
 
-    function serieService($http, $logger) {
+    function SerieService($http) {
         return {
           getSeries: getSeries,
           getSerie: getSerie
@@ -23,9 +23,7 @@
                 return response.data.restults;
             }
 
-            function getSeriesFailed(error) {
-                logger.error('XHR Failed for getSeries. ' + error);
-            }
+            function getSeriesFailed(error) { }
         }
 
         function getSerie(title) {
@@ -37,9 +35,7 @@
                 return response.data.restults;
             }
 
-            function getSerieFailed(error) {
-                logger.error('XHR Failed for getSerie. ' + error);
-            }
+            function getSerieFailed(error) { }
         }
     }
 

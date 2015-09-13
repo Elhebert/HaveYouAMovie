@@ -6,22 +6,20 @@
         .module('hyam.movie')
         .controller('movieController', movieController);
 
-    movieController.$inject = ['movieService', 'logger']
+    movieController.$inject = ['MovieService']
 
-    function movieController(movieService, logger) {
+    function movieController(MovieService) {
         var vm = this;
         vm.movies = [];
 
         activate();
 
         function activate() {
-            return getMovies().then(function() {
-                logger.info('Activate Movies View');
-            });
+            return getMovies();
         }
 
         function getMovies() {
-            return movieService.getMovies()
+            return MovieService.getMovies()
                 .then(function(data) {
                     vm.movies = data;
                     return vm.movies;

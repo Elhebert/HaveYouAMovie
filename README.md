@@ -1,9 +1,9 @@
 #HaveYouAMovie 2.0.0
 
-Big badass rework in progress.
+Big bad ass rework in progress.
 
 Switching from :
-- procédural php
+- procedural php
 - jQuery + ajax
 
 to :
@@ -22,6 +22,6 @@ bower install
 
 ## Contributing
 
-If you wish to help me and contribute, feel free to clone, just be kiond enough to respect some guidelines :
+If you wish to help me and contribute, feel free to clone, just be kind enough to respect some guidelines :
 
-- AngularJS : John Papa's angular styleguide (see [here](https://github.com/johnpapa/angular-styleguide))
+- AngularJS : John Papa's angular style guide (see [here](https://github.com/johnpapa/angular-styleguide))

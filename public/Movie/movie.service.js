@@ -4,15 +4,18 @@
 
     angular
         .module('hyam.movie')
-        .factory('movieService', movieService);
+        .factory('MovieService', MovieService);
 
-    movieService.$inject = ['$http', 'logger'];
+    MovieService.$inject = ['$http'];
 
-    function movieService($http, $logger) {
-        return {
-          getMovies: getMovies,
-          getMovie: getMovie
+    function MovieService($http) {
+
+        var service = {
+            getMovies: getMovies,
+            getMovie: getMovie
         };
+
+        return service;
 
         function getMovies() {
             return $http.get('/api/movie')
@@ -20,12 +23,10 @@
                 .catch(getMoviesFailed);
 
             function getMoviesComplete(response) {
-                return response.data.restults;
+                return response.data.results;
             }
 
-            function getMoviesFailed(error) {
-                logger.error('XHR Failed for getMovies. ' + error);
-            }
+            function getMoviesFailed(error) { }
         }
 
         function getMovie(title) {
@@ -34,12 +35,10 @@
                 .catch(getMovieFailed);
 
             function getMovieComplete(response) {
-                return response.data.restults;
+                return response.data.results;
             }
 
-            function getMovieFailed(error) {
-                logger.error('XHR Failed for getMovie. ' + error);
-            }
+            function getMovieFailed(error) { }
         }
     }
 

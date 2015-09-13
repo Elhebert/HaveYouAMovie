@@ -4,9 +4,9 @@
 
     angular
         .module('hyam.serie')
-        .directive('SerieController', SerieController);
+        .directive('SerieDirective', SerieDirective);
 
-    function SerieController() {
+    function SerieDirective() {
 
     }
 
