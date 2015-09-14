@@ -12,7 +12,9 @@
 
         var service = {
             getMovies: getMovies,
-            getMovie: getMovie
+            getMovie: getMovie,
+            setMovie: setMovie,
+            searchMovie: searchMovie
         };
 
         return service;
@@ -39,6 +41,30 @@
             }
 
             function getMovieFailed(error) { }
+        }
+
+        function setMovie(movie) {
+            return $http.put('/api/movie', movie)
+                .then(setMovieComplete)
+                .catch(setMovieFailed);
+
+            function setMovieComplete(response) {
+                return response.data.results;
+            }
+
+            function setMovieFailed(error) { }
+        }
+
+        function searchMovie(title) {
+            return $http.get('/api/movie/' + title)
+                .then(searchMovieComplete)
+                .catch(searchMovieFailed);
+
+            function searchMovieComplete(response) {
+                return response.data.results;
+            }
+
+            function searchMovieFailed(error) { }
         }
     }
 

@@ -1,36 +1,41 @@
-angular
-    .module('hyam.config')
-    .provider('routerHelper', routerHelperProvider);
+(function() {
 
-routerHelperProvider.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
+    'use strict';
 
-function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvider) {
-    this.$get = RouterHelper;
+    angular
+        .module('hyam.config')
+        .provider('routerHelper', routerHelperProvider);
 
-    $locationProvider.html5Mode(true);
+    routerHelperProvider.$inject = ['$locationProvider', '$stateProvider', '$urlRouterProvider'];
 
-    RouterHelper.$inject = ['$state'];
+    function routerHelperProvider($locationProvider, $stateProvider, $urlRouterProvider) {
+        this.$get = RouterHelper;
 
-    function RouterHelper($state) {
-        var hasOtherwise = false;
+        $locationProvider.html5Mode(true);
 
-        var service = {
-            configureStates: configureStates,
-            getStates: getStates
-        };
+        RouterHelper.$inject = ['$state'];
 
-        return service;
+        function RouterHelper($state) {
+            var hasOtherwise = false;
 
-        function configureStates(states, otherwisePath) {
-            states.forEach(function(state) {
-                $stateProvider.state(state.state, state.config);
-            });
-            if (otherwisePath && !hasOtherwise) {
-                hasOtherwise = true;
-                $urlRouterProvider.otherwise(otherwisePath);
+            var service = {
+                configureStates: configureStates,
+                getStates: getStates
+            };
+
+            return service;
+
+            function configureStates(states, otherwisePath) {
+                states.forEach(function(state) {
+                    $stateProvider.state(state.state, state.config);
+                });
+                if (otherwisePath && !hasOtherwise) {
+                    hasOtherwise = true;
+                    $urlRouterProvider.otherwise(otherwisePath);
+                }
             }
-        }
 
-        function getStates() { return $state.get(); }
+            function getStates() { return $state.get(); }
+        }
     }
-}
+})()

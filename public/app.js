@@ -4,6 +4,7 @@
 
     angular.module(
             'hyam', [
+                'hyam.config',
                 'hyam.movie',
                 'hyam.serie',
                 'ngMaterial',

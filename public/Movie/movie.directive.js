@@ -4,10 +4,21 @@
 
     angular
         .module('hyam.movie')
-        .directive('MovieController', MovieController);
+        .directive('MovieDirective', MovieDirective);
 
-    function MovieController() {
+    function MovieDirective() {
+        var directive = {
+            restrict: 'E',
+            templateUrl: './movie.html',
+            scope: {
+                movie: '='
+            },
+            controller: MovieController,
+            controllerAs: MovieCtrl,
+            bindToController: true,
+        }
 
+        return directive;
     }
 
 

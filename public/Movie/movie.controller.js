@@ -4,13 +4,14 @@
 
     angular
         .module('hyam.movie')
-        .controller('movieController', movieController);
+        .controller('MovieController', MovieController);
 
-    movieController.$inject = ['MovieService']
+    MovieController.$inject = ['MovieService']
 
-    function movieController(MovieService) {
+    function MovieController(MovieService) {
         var vm = this;
         vm.movies = [];
+        vm.movie = {};
 
         activate();
 
@@ -20,6 +21,22 @@
 
         function getMovies() {
             return MovieService.getMovies()
+                .then(function(data) {
+                    vm.movies = data;
+                    return vm.movies;
+                });
+        }
+
+        function getMovie(title) {
+            return MovieService.getMovie(title)
+                .then(function(data) {
+                    vm.movie = data;
+                    return vm.movie;
+                });
+        }
+
+        function searchMovie(title) {
+            return MovieService.searchMovie(title)
                 .then(function(data) {
                     vm.movies = data;
                     return vm.movies;

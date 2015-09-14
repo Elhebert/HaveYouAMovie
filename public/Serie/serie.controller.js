@@ -6,8 +6,40 @@
         .module('hyam.serie')
         .controller('SerieController', SerieController);
 
-    function SerieController() {
+    function SerieController(SerieService) {
+        var vm = this;
+        vm.series = [];
+        vm.serie = {};
 
+        activate();
+
+        function activate() {
+            return getSeries();
+        }
+
+        function getSeries() {
+            return SerieService.getSeries()
+                .then(function(data) {
+                    vm.series = data;
+                    return vm.series;
+                });
+        }
+
+        function getSerie(title) {
+            return SerieService.getSerie(title)
+                .then(function(data) {
+                    vm.serie = data;
+                    return vm.serie;
+                });
+        }
+
+        function searchSerie(title) {
+            return SerieService.searchSerie(title)
+                .then(function(data) {
+                    vm.series = data;
+                    return vm.series;
+                });
+        }
     }
 
 
