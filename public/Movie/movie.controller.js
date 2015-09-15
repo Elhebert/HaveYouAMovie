@@ -35,6 +35,10 @@
                 });
         }
 
+        function setMovie(title) {
+            return MovieService.setMovie(title);
+        }
+
         function searchMovie(title) {
             return MovieService.searchMovie(title)
                 .then(function(data) {

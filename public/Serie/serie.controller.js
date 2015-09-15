@@ -33,6 +33,10 @@
                 });
         }
 
+        function setSerie(title) {
+            return SerieService.setSerie(title);
+        }
+
         function searchSerie(title) {
             return SerieService.searchSerie(title)
                 .then(function(data) {
