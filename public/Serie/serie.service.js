@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('hyam.serie')
+        .module('hyam.serie', [])
         .factory('SerieService', SerieService);
 
     SerieService.$inject = ['$http', 'logger'];

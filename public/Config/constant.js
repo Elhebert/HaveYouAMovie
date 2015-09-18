@@ -7,7 +7,7 @@
         'name': 'HaveYou a movie',
         'author' : 'Elhebert <elhebert@hotmail.be>',
         'license': 'ISC'
-};
+    };
 
     angular
         .module('hyam.config')

@@ -3,10 +3,10 @@
     'use strict';
 
     angular
-        .module('hyam.serie')
-        .directive('SerieDirective', SerieDirective);
+        .module('hyam.serie', [])
+        .directive('serieDirective', serieDirective);
 
-    function SerieDirective() {
+    function serieDirective() {
         var directive = {
             restrict: 'E',
             templateUrl: './serie.html',

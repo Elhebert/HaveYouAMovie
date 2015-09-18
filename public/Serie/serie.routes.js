@@ -4,30 +4,21 @@
 
     angular
         .module('hyam.serie')
-        .run(hyamRun);
+        .config(serieRoute);
 
-    function hyamRun(routerHelper) {
-        routerHelper.configureStates(getStates());
-    }
+    serieRoute.$inject = ['$stateProvider','$urlRouterProvider'];
 
-    function getStates() {
-        return [
-            {
-                state: 'serie.index',
-                config: {
-                    abstract: true,
-                    template: '',
-                    url: '/serie'
-                }
-            },
-            {
-                state: 'serie.show',
-                config: {
-                    abstract: true,
-                    template: '',
-                    url: '/serie/:title'
-                }
-            }
-        ];
+    function serieRoute($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('serie', {
+                url: '/serie',
+                templateUrl: 'serie.html',
+                controller: 'SerieController as vm'
+            })
+            .state('get',{
+                parent:'serie',
+                url:'/:title',
+                templateUrl: 'serie.html'
+            });
     }
 })();

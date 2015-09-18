@@ -3,10 +3,10 @@
     'use strict';
 
     angular
-        .module('hyam.movie')
-        .directive('MovieDirective', MovieDirective);
+        .module('hyam.movie', [])
+        .directive('movieDirective', movieDirective);
 
-    function MovieDirective() {
+    function movieDirective() {
         var directive = {
             restrict: 'E',
             templateUrl: './movie.html',

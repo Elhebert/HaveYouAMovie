@@ -4,30 +4,21 @@
 
     angular
         .module('hyam.movie')
-        .run(hyamRun);
+        .config(movieRoute);
 
-    function hyamRun(routerHelper) {
-        routerHelper.configureStates(getStates());
-    }
+    movieRoute.$inject = ['$stateProvider','$urlRouterProvider'];
 
-    function getStates() {
-        return [
-            {
-                state: 'movie.index',
-                config: {
-                    abstract: true,
-                    template: '',
-                    url: '/movie'
-                }
-            },
-            {
-                state: 'movie.show',
-                config: {
-                    abstract: true,
-                    template: '',
-                    url: '/movie/:title'
-                }
-            }
-        ];
+    function movieRoute($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('movie', {
+                url: '/movie',
+                templateUrl: 'movie.html',
+                controller: 'MovieController as vm'
+            })
+            .state('get',{
+                parent:'movie',
+                url:'/:title',
+                templateUrl: 'movie.html'
+            });
     }
 })();

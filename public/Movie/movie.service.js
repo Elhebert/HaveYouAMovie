@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('hyam.movie')
+        .module('hyam.movie', [])
         .factory('MovieService', MovieService);
 
     MovieService.$inject = ['$http'];

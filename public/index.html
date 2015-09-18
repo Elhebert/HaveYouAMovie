@@ -7,18 +7,34 @@
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
         <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
 	</head>
-	<body ng-app="hyam">
+	<body ng-app="hyam" layout="row">
 
-        <md-toolbar>
-            <div class="md-toolbar-tools">
-                <md-button class="md-icon-button" aria-label="Settings">
-                    <md-icon md-svg-icon="./bower_components/material-design-icons/maps/svg/design/ic_local_airport_24px.svg"></md-icon>
-                </md-button>
-                <h2>
-                    <span class="md-title">Get Lost!</span>
-                </h2>
-            </div>
-        </md-toolbar>
+
+        <md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                    md-component-id="left"
+                    md-is-locked-open="$mdMedia('gt-sm')">
+
+            <md-toolbar class="md-whiteframe-z1">
+                <h1 class="md-toolbar-tools">Menu</h1>
+            </md-toolbar>
+
+
+        </md-sidenav>
+
+        <div flex layout="column" tabIndex="-1" role="main" class="md-whiteframe-z2">
+            <md-content>
+                <md-toolbar>
+                    <div class="md-toolbar-tools">
+                        <md-button class="md-icon-button" aria-label="Settings">
+                            <md-icon md-svg-icon="../bower_components/material-design-icons/image/svg/production/ic_dehaze_24px.svg"></md-icon>
+                        </md-button>
+                        <h2>
+                            <span>HaveYou a movie ?</span>
+                        </h2>
+                    </div>
+                </md-toolbar>
+            </md-content>
+        </div>
 
         <div ng-view></div>
 
@@ -34,14 +50,16 @@
         <!-- App -->
         <script src="app.js"></script>
 
+        <script src="Config/config.module.js"></script>
         <script src="Config/constant.js"></script>
-        <script src="Config/routeHelper.provider.js"></script>
 
+        <script src="Movie/movie.module.js"></script>
         <script src="Movie/movie.routes.js"></script>
         <script src="Movie/movie.controller.js"></script>
         <script src="Movie/movie.service.js"></script>
         <script src="Movie/movie.directive.js"></script>
 
+        <script src="Serie/serie.module.js"></script>
         <script src="Serie/serie.routes.js"></script>
         <script src="Serie/serie.controller.js"></script>
         <script src="Serie/serie.service.js"></script>

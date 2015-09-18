@@ -9,7 +9,7 @@
                 'hyam.serie',
                 'ngMaterial',
                 'ngRoute',
-                'router-ui'
+                'ui.router'
             ]);
 
 })();
