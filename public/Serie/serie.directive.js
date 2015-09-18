@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('hyam.serie', [])
+        .module('hyam.serie')
         .directive('serieDirective', serieDirective);
 
     function serieDirective() {

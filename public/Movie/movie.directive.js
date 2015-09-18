@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('hyam.movie', [])
+        .module('hyam.movie')
         .directive('movieDirective', movieDirective);
 
     function movieDirective() {

@@ -3,7 +3,7 @@
     'use strict';
 
     angular
-        .module('hyam.serie', [])
+        .module('hyam.serie')
         .controller('SerieController', SerieController);
 
     SerieController.$inject = ['SerieService'];
