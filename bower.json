@@ -18,9 +18,10 @@
     "globals"
   ],
   "dependencies": {
+    "angular": "angularjs#~1.4.6",
     "angular-material": "~0.11.0",
-    "angular-ui-router": "~0.2.15",
+    "angular-route": "~1.4.6",
     "angular-ui": "~0.4.0",
-    "angular": "angularjs#~1.4.5"
+    "angular-ui-router": "~0.2.15"
   }
 }

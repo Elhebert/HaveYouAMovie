@@ -3,13 +3,13 @@
     'use strict';
 
     angular.module(
-            'hyam', [
+        'hyam', [
                 'hyam.config',
                 'hyam.movie',
                 'hyam.serie',
                 'ngMaterial',
+                'ngRoute',
                 'router-ui'
             ]);
-
 
 })();

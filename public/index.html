@@ -5,19 +5,47 @@
 		<meta charset="UTF-8">
 
         <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-
-		<link rel="stylesheet" href="/bower_components/angular-material/angular-material.css">
+        <link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
 	</head>
 	<body ng-app="hyam">
+
+        <md-toolbar>
+            <div class="md-toolbar-tools">
+                <md-button class="md-icon-button" aria-label="Settings">
+                    <md-icon md-svg-icon="./bower_components/material-design-icons/maps/svg/design/ic_local_airport_24px.svg"></md-icon>
+                </md-button>
+                <h2>
+                    <span class="md-title">Get Lost!</span>
+                </h2>
+            </div>
+        </md-toolbar>
 
         <div ng-view></div>
 
         <!-- Bower -->
-        <script src="/bower_components/angular/angular.js"></script>
-        <script src="/bower_components/angular/angular-ui.js"></script>
-		<script src="/bower_components/angular/angular-ui-router.js"></script>
-        <script src="/bower_components/angular-aria/angular-aria.js"></script>
-        <script src="/bower_components/angular-animate/angular-animate.js"></script>
-        <script src="/bower_components/angular-material/angular-material.js"></script>
-	</body>
+        <script src="../bower_components/angular/angular.min.js"></script>
+        <script src="../bower_components/angular-route/angular-route.min.js"></script>
+        <script src="../bower_components/angular-ui/build/angular-ui.min.js"></script>
+		<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+        <script src="../bower_components/angular-aria/angular-aria.min.js"></script>
+        <script src="../bower_components/angular-animate/angular-animate.min.js"></script>
+        <script src="../bower_components/angular-material/angular-material.min.js"></script>
+
+        <!-- App -->
+        <script src="app.js"></script>
+
+        <script src="Config/constant.js"></script>
+        <script src="Config/routeHelper.provider.js"></script>
+
+        <script src="Movie/movie.routes.js"></script>
+        <script src="Movie/movie.controller.js"></script>
+        <script src="Movie/movie.service.js"></script>
+        <script src="Movie/movie.directive.js"></script>
+
+        <script src="Serie/serie.routes.js"></script>
+        <script src="Serie/serie.controller.js"></script>
+        <script src="Serie/serie.service.js"></script>
+        <script src="Serie/serie.directive.js"></script>
+
+    </body>
 </html>
