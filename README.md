@@ -15,6 +15,6 @@ to :
 Don't forget to run:
 
 ```
-composer install
+npm install
 bower install
 ```
