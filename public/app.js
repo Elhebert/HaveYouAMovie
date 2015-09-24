@@ -1,9 +1,8 @@
-(function(){
+(function () {
 
-    'use strict';
+  'use strict';
 
-    angular.module(
-        'hyam', [
+  angular.module('hyam', [
                 'hyam.config',
                 'hyam.movie',
                 'hyam.serie',
@@ -11,5 +10,4 @@
                 'ngRoute',
                 'ui.router'
             ]);
-
 })();

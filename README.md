@@ -8,7 +8,7 @@ Switching from :
 
 to :
 - Angular.js
-- slim
+- nodejs
 
 ## Installation
 

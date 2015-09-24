@@ -15,7 +15,7 @@
                 templateUrl: 'movie.html',
                 controller: 'MovieController as vm'
             })
-            .state('get',{
+            .state('getMovie',{
                 parent:'movie',
                 url:'/:title',
                 templateUrl: 'movie.html'

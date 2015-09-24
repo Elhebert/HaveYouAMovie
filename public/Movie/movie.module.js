@@ -2,6 +2,6 @@
 
     'use strict';
 
-    angular.module('hyam.movie');
+    angular.module('hyam.movie', []);
 
 })();

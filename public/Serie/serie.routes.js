@@ -15,7 +15,7 @@
                 templateUrl: 'serie.html',
                 controller: 'SerieController as vm'
             })
-            .state('get',{
+            .state('getSerie',{
                 parent:'serie',
                 url:'/:title',
                 templateUrl: 'serie.html'
