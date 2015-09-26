@@ -11,11 +11,15 @@
   "devDependencies": {
     "bower": "^1.5.3",
     "gulp": "^3.9.0",
-    "jshint": "^2.8.0"
+    "jshint": "^2.8.0",
+    "method-override": "^2.3.5"
   },
   "dependencies": {
-    "express": "^4.12.3",
-    "mongoose": "^4.0.2",
+    "body-parser": "^1.0.2",
+    "express": "^4.13.3",
+    "jsonwebtoken": "^5.0.5",
+    "mongoose": "^4.1.8",
+    "morgan": "^1.6.1",
     "underscore": "^1.8.3"
   }
 }

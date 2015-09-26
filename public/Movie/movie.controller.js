@@ -6,7 +6,7 @@
         .module('hyam.movie')
         .controller('MovieController', MovieController);
 
-    MovieController.$inject = ['MovieService']
+    MovieController.$inject = ['MovieService'];
 
     function MovieController(MovieService) {
         var vm = this;
