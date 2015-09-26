@@ -1,25 +1,21 @@
 {
-  "name": "haveyou-a-movie",
-  "version": "1.0.0",
-  "description": "",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Elhebert/HaveYouAMovie"
-  },
-  "author": "Elhebert <elhebert@hotmail.be>",
-  "license": "ISC",
-  "devDependencies": {
-    "bower": "^1.5.3",
-    "gulp": "^3.9.0",
-    "jshint": "^2.8.0",
-    "method-override": "^2.3.5"
-  },
-  "dependencies": {
-    "body-parser": "^1.0.2",
-    "express": "^4.13.3",
-    "jsonwebtoken": "^5.0.5",
-    "mongoose": "^4.1.8",
-    "morgan": "^1.6.1",
-    "underscore": "^1.8.3"
-  }
+	"name": "haveyou-a-movie",
+	"version": "2.0.0",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/Elhebert/HaveYouAMovie"
+	},
+	"author": "Elhebert <elhebert@hotmail.be>",
+	"devDependencies": {
+		"bower": "^1.5.3",
+		"gulp": "^3.9.0",
+		"jshint": "^2.8.0"
+	},
+	"dependencies": {
+		"body-parser": "^1.0.2",
+		"express": "^4.13.3",
+		"mongoose": "^4.1.8",
+		"morgan": "^1.6.1",
+        "method-override": "^2.3.5"
+	}
 }

@@ -2,25 +2,23 @@
 	"name": "haveyou-a-movie",
 	"version": "2.0.0",
 	"authors": [
-    "Elhebert <elhebert@hotmail.be>"
-  ],
+    	"Elhebert <elhebert@hotmail.be>"
+	],
 	"main": "public/index.html",
-	"license": "ISC",
 	"ignore": [
-    "**/.*",
-    "node_modules",
-    "bower_components",
-    "test",
-    "tests"
-  ],
+	    "**/.*"
+	],
 	"homepage": "https://github.com/Elhebert/HaveYouAMovie",
 	"dependencies": {
-		"angular": "angularjs#~1.4.6",
+		"angular": "~1.4.6",
 		"angular-material": "~0.11.0",
 		"angular-route": "~1.4.6",
 		"angular-ui": "~0.4.0",
 		"angular-ui-router": "~0.2.15",
 		"material-design-icons": "~2.0.0"
 	},
-    "private": true
+	"resolutions": {
+		"angular": "~1.4.6"
+	},
+	"private": true
 }

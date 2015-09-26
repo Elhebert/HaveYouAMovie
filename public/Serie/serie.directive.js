@@ -16,7 +16,7 @@
             controller: SerieController,
             controllerAs: SerieCtrl,
             bindToController: true,
-        }
+        };
 
         return directive;
     }

@@ -58,7 +58,7 @@
   ],
 
   "globals": {
-      "angular": false,
+      "angular": true,
       "$": false
   }
 }
