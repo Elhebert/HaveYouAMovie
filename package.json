@@ -18,5 +18,8 @@
 		"morgan": "^1.6.1",
 		"underscore": "^1.8.3",
         "method-override": "^2.3.5"
+	},
+	"scripts" : {
+		"postinstall" : "bower install"
 	}
 }

@@ -1,6 +1,6 @@
-#HaveYouAMovie 2.0.0
+# HaveYouAMovie 2.0.0
 
-##Big bad ass rework in progress
+## Big bad ass rework in progress
 
 Switching from :
 - mysql
