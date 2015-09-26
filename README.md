@@ -8,10 +8,10 @@ Switching from :
 - jQuery + ajax
 
 to :
-- __M__ongo
-- __E__xpress
-- __A__ngular
-- __N__odeJs
+- **M**ongo
+- **E**xpress
+- **A**ngular
+- **N**odeJs
 
 ## Installation
 
