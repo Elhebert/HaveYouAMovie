@@ -1,3 +1,3 @@
 module.exports = {
-	url: 'mongodb://local.dev/hyam'
+	url: 'mongodb://local.dev:27017/hyam'
 };

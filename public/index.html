@@ -11,28 +11,56 @@
 
 	<body ng-app="hyam" layout="row">
 
+	<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
+                md-component-id="menu"
+                md-is-locked-open="$mdMedia('gt-sm')">
+
+	    <md-toolbar class="md-whiteframe-z1">
+	    	<h1>Menu</h1>
+	    </md-toolbar>
+
+	    <md-list>
+			<md-list-item>
+				<md-button ng-click="" ng-class="">
+					<md-icon md-svg-icon="" class=""></md-icon>
+					Movies
+				</md-button>
+			</md-list-item>
+		</md-list>
+
+	</md-sidenav>
+
 		<div flex layout="column" layout-fill>
-			<md-content>
-				<md-toolbar>
-					<div class="md-toolbar-tools">
-						<h2>
-							<span>HaveYou a movie ?</span>
-						</h2>
-					</div>
-				</md-toolbar>
-			</md-content>
+			<md-toolbar>
+				<div class="md-toolbar-tools">
+					<h2>
+						<md-icon class="md-secondary" md-svg-src="bower_components/material-design-icons/navigation/svg/production/ic_menu_48px.svg" aria-label="menu"></md-icon>
+						<span>HaveYou a movie ?</span>
+					</h2>
+				</div>
+			</md-toolbar>
+			<div flex layout="row" layout-fill>
+				<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm');">
+					<md-content layout-padding>
+
+					</md-content>
+				</md-sidenav>
+
+
+				<div ng-view></div>
+			</div>
 		</div>
 
-		<div ng-view></div>
+
 
 		<!-- Bower -->
-		<script src="../bower_components/angular/angular.min.js"></script>
-		<script src="../bower_components/angular-route/angular-route.min.js"></script>
-		<script src="../bower_components/angular-ui/build/angular-ui.min.js"></script>
-		<script src="../bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
-		<script src="../bower_components/angular-aria/angular-aria.min.js"></script>
-		<script src="../bower_components/angular-animate/angular-animate.min.js"></script>
-		<script src="../bower_components/angular-material/angular-material.min.js"></script>
+		<script src="bower_components/angular/angular.min.js"></script>
+		<script src="bower_components/angular-route/angular-route.min.js"></script>
+		<script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+		<script src="bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+		<script src="bower_components/angular-aria/angular-aria.min.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.min.js"></script>
+		<script src="bower_components/angular-material/angular-material.min.js"></script>
 
 		<!-- App -->
 		<script src="app.js"></script>
