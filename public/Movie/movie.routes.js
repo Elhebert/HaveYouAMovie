@@ -12,13 +12,13 @@
         $stateProvider
             .state('movie', {
                 url: '/movie',
-                templateUrl: 'movie.html',
+                templateUrl: 'Movie/movie.html',
                 controller: 'MovieController as vm'
             })
             .state('getMovie',{
                 parent:'movie',
                 url:'/:title',
-                templateUrl: 'movie.html'
+                templateUrl: 'Movie/movie.html'
             });
     }
 })();

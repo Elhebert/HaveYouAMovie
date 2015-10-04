@@ -1,0 +1,14 @@
+md-list-item .md-button {
+	color: inherit;
+	font-weight: 500;
+	text-align: left;
+	padding-left: 30px;
+	width: 100%;
+	height: 64px;
+	margin: 0;
+}
+
+.md-image {
+	height: auto;
+	width: 150px;
+}

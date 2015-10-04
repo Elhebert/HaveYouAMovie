@@ -6,52 +6,15 @@
 		<meta charset="UTF-8">
 
 		<meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="../bower_components/angular-material/angular-material.css">
+		<link rel="stylesheet" href="bower_components/angular-material/angular-material.css">
+		<link rel="stylesheet" href="Style/style.css">
 	</head>
 
 	<body ng-app="hyam" layout="row">
 
-	<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z2"
-                md-component-id="menu"
-                md-is-locked-open="$mdMedia('gt-sm')">
+		<sidebar layout="row"></sidebar>
 
-	    <md-toolbar class="md-whiteframe-z1">
-	    	<h1>Menu</h1>
-	    </md-toolbar>
-
-	    <md-list>
-			<md-list-item>
-				<md-button ng-click="" ng-class="">
-					<md-icon md-svg-icon="" class=""></md-icon>
-					Movies
-				</md-button>
-			</md-list-item>
-		</md-list>
-
-	</md-sidenav>
-
-		<div flex layout="column" layout-fill>
-			<md-toolbar>
-				<div class="md-toolbar-tools">
-					<h2>
-						<md-icon class="md-secondary" md-svg-src="bower_components/material-design-icons/navigation/svg/production/ic_menu_48px.svg" aria-label="menu"></md-icon>
-						<span>HaveYou a movie ?</span>
-					</h2>
-				</div>
-			</md-toolbar>
-			<div flex layout="row" layout-fill>
-				<md-sidenav class="md-sidenav-left md-whiteframe-z2" md-component-id="left" md-is-locked-open="$mdMedia('gt-sm');">
-					<md-content layout-padding>
-
-					</md-content>
-				</md-sidenav>
-
-
-				<div ng-view></div>
-			</div>
-		</div>
-
-
+		<ui-view layout-padding layout-margin></ui-view>
 
 		<!-- Bower -->
 		<script src="bower_components/angular/angular.min.js"></script>
@@ -67,6 +30,8 @@
 
 		<script src="Config/config.module.js"></script>
 		<script src="Config/constant.js"></script>
+		<script src="Config/icons.config.js"></script>
+		<script src="Config/theme.config.js"></script>
 
 		<script src="Movie/movie.module.js"></script>
 		<script src="Movie/movie.routes.js"></script>
@@ -79,6 +44,9 @@
 		<script src="Serie/serie.controller.js"></script>
 		<script src="Serie/serie.service.js"></script>
 		<script src="Serie/serie.directive.js"></script>
+
+		<script src="Layout/layout.module.js"></script>
+		<script src="Layout/sidebar.directive.js"></script>
 
 	</body>
 

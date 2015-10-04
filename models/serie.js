@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var Serie = mongoose.model('Serie', {
+module.exports = mongoose.model('serie', {
 	title: {
 		type: String,
 		required: true

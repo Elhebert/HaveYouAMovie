@@ -4,19 +4,19 @@
 
     angular
         .module('hyam.movie')
-        .directive('movieDirective', movieDirective);
+        .directive('movie', movieDirective);
 
     function movieDirective() {
         var directive = {
             restrict: 'E',
-            templateUrl: './movie.html',
+            templateUrl: 'Movie/movie.html',
             scope: {
                 movie: '='
             },
             controller: MovieController,
             controllerAs: MovieCtrl,
             bindToController: true,
-        }
+        };
 
         return directive;
     }

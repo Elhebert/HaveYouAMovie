@@ -2,6 +2,6 @@
 
     'use strict';
 
-    angular.module('hyam.config', ['ui.router']);
+    angular.module('hyam.config', ['ui.router', 'ngMaterial']);
 
 })();

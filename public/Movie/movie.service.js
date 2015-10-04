@@ -20,7 +20,7 @@
         return service;
 
         function getMovies() {
-            return $http.get('/api/movie')
+            return $http.get('/api/movies')
                 .then(getMoviesComplete)
                 .catch(getMoviesFailed);
 

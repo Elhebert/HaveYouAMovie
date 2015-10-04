@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-var Movie = mongoose.model('Movie', {
+module.exports = mongoose.model('movie', {
 	title: {
 		type: String,
 		required: true
