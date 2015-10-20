@@ -19,7 +19,6 @@ Don't forget to run:
 
 ```
 npm install
-bower install
 ```
 
 ## Configuration
