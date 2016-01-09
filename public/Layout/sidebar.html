@@ -1,0 +1,55 @@
+<md-sidenav class="site-sidenav md-sidenav-left md-whiteframe-z3"
+			md-component-id="menu"
+			md-is-locked-open="$mdMedia('gt-sm')">
+
+	<md-toolbar class="md-whiteframe-z1">
+		<h2 class="md-toolbar-tools">HaveYou a movie ?</h2>
+	</md-toolbar>
+
+	<md-list>
+		<md-list-item>
+			<md-button>
+				<md-icon md-svg-icon="home" class="md-secondary"></md-icon>
+				Home
+			</md-button>
+		</md-list-item>
+		<md-divider></md-divider>
+		<md-list-item>
+			<md-input-container flex>
+				<label>Search</label>
+				<input ng-model="search.what">
+			</md-input-container>
+		</md-list-item>
+		<md-divider></md-divider>
+		<md-list-item>
+			<h3>Movies</h3>
+		</md-list-item>
+		<md-divider></md-divider>
+		<md-list-item>
+			<md-button>
+				Add a movie
+			</md-button>
+		</md-list-item>
+		<md-list-item>
+			<md-button ui-sref="movie">
+				List all the movies
+			</md-button>
+		</md-list-item>
+		<md-divider></md-divider>
+		<md-list-item>
+			<h3>Series</h3>
+		</md-list-item>
+		<md-divider></md-divider>
+		<md-list-item>
+			<md-button>
+				Add a serie
+			</md-button>
+		</md-list-item>
+		<md-list-item>
+			<md-button ui-sref="serie">
+				List all the series
+			</md-button>
+		</md-list-item>
+	</md-list>
+
+</md-sidenav>

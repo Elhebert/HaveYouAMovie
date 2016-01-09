@@ -1,0 +1,21 @@
+<div class="md-whiteframe-z1">
+	<md-content layout-padding>
+		<md-list ng-show="vm.movies">
+			<md-list-item class="md-3-lines" ng-repeat="movie in vm.movies">
+				<img layout-margin class="md-image" ng-src="{{ movie.thumbnail }}" alt="{{ movie.title }}" />
+				<div class="md-list-item-text" layout="column">
+					<h3>{{ movie.title }} ({{ movie.year }})</h3>
+					<h5>{{ movie.genre }}</h5>
+					<p>
+						{{ movie.synopsis }}
+					</p>
+				</div>
+			</md-list-item>
+		</md-list>
+
+		<div ng-show="!vm.movies">
+			<h3>No movies founded</h3>
+		</div>
+
+	</md-content>
+</div>
